@@ -31,7 +31,7 @@ window.onload = function () {
     const ui = new UI({ canvas, callbacks : { move, printPoints, printEdges, printPolygons}})
     const SCENE = [
         //sur.ellipticcylinder(),
-        //sur.hyperboliccylinder(),
+        sur.hyperboliccylinder(),
         //sur.paraboliccylinder(),
         //sur.ellipticparaboloid(),
         //sur.saturn(),
@@ -42,6 +42,7 @@ window.onload = function () {
         //sur.doublehyperboloid(),
         //sur.singlehyperboloid(),
         //sur.ellipsoid(),
+        /*
         sur.sphera(20, 10, new Point(0, 0, 0), "#F4FA58", {}), //солнце 0
         sur.sphera(20, 3, new Point(10, Math.sqrt(400 - 100), 0), "#f74b0e", 
             { rotateOz: new Point}), // меркурий 1
@@ -57,7 +58,7 @@ window.onload = function () {
          sur.sphera(20, 5.5, new Point(0, 180, 0), "#86aeff", { rotateOz: new Point}), // уран 9
          //sur.bublik(20, 12, new Point(0, 180, 0), "#86c5ff", { rotateOz: new Point}), // кольцо урана 10
          sur.sphera(20, 5.3, new Point(-Math.sqrt(200 * 200 - 70 * 70), 70, 0), "#0263c5", { rotateOz: new Point}), // нептут 11
-
+        */
         
           ]; // сцена
      const LIGHT = new Light(-20, 2, -20, 500);
@@ -202,6 +203,9 @@ window.onload = function () {
 
                 // алгоритм художника
                 // отрисовка полигонов
+
+                graph3D.makeWindow(subject);//очень примитивное окошко получается. С удалением полгинов не вяжется никак.
+
                 for (let i = 0; i < subject.polygons.length; i++) {
                     if (subject.polygons[i].visible) {
                         const polygon = subject.polygons[i];
@@ -226,7 +230,7 @@ window.onload = function () {
                             color: polygon.rgbToHex(r, g, b),
                             distance: polygon.distance
                         });
-                    }
+                    }                    
                 }
             });
             // отрисовка всех полигонов

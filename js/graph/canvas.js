@@ -75,7 +75,7 @@ class Canvas {
     text(x, y, text, font = '25px bold Arial', color = '#000') {
         this.contextV.fillStyle = color;
         this.contextV.font = font;
-        this.contextV.fillText(text, this.xsPolygon(x), this.ysPolygon(y));
+        this.contextV.fillText(text, this.xs(x), this.ys(y));
     }
 
     polygon(points, color = '#ff0000') {

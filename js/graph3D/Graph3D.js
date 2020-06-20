@@ -71,6 +71,42 @@ class Graph3D {
         }
     }
 
+    makeWindow(subject) {
+        //первая часть 
+        subject.polygons[229].visible = false;
+        subject.polygons[230].visible = false;
+        subject.polygons[231].visible = false;
+        subject.polygons[220].visible = false;
+        subject.polygons[221].visible = false;
+        subject.polygons[222].visible = false;
+        subject.polygons[211].visible = false;
+        subject.polygons[212].visible = false;
+        subject.polygons[213].visible = false;
+        subject.polygons[202].visible = false;
+        subject.polygons[203].visible = false;
+        subject.polygons[204].visible = false;
+        subject.polygons[193].visible = false;
+        subject.polygons[194].visible = false;
+        subject.polygons[195].visible = false;
+
+        //вторая часть
+        subject.polygons[1230].visible = false;
+        subject.polygons[1229].visible = false;
+        subject.polygons[1228].visible = false;
+        subject.polygons[1221].visible = false;
+        subject.polygons[1220].visible = false;
+        subject.polygons[1219].visible = false;
+        subject.polygons[1212].visible = false;
+        subject.polygons[1211].visible = false;
+        subject.polygons[1210].visible = false;
+        subject.polygons[1203].visible = false;
+        subject.polygons[1202].visible = false;
+        subject.polygons[1201].visible = false;
+        subject.polygons[1194].visible = false;
+        subject.polygons[1193].visible = false;
+        subject.polygons[1192].visible = false;  
+    }
+
     calcDistance(subject, endPoint, name) {
         for (let i = 0; i < subject.polygons.length; i++) {
             const polygon = subject.polygons[i];
